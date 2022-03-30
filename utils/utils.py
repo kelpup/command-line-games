@@ -7,7 +7,7 @@ import os
 # Helper function to print slowly 
 def timed_print(string, delay):
 	for char in string:
-		print(char, end='')
+		print(char, end ='')
 		sys.stdout.flush()
 		time.sleep(delay)
 	print()
@@ -15,7 +15,8 @@ def timed_print(string, delay):
 # Helper function to print a full line
 def print_line(string, num):
     for i in range(num):
-        print(string, end = '')
+        print(string, end ='')
+    print()
 
 
 # Python pwd function
@@ -27,15 +28,3 @@ def pwd_python():
 def ls_python():
     ls = os.listdir('.')
     return(ls)
-
-def main():
-	# timed_print("Hello, there :)", 0.08)
-    print_line('#', 50)
-    text_time = 0.08
-    timed_print('Welcome to your first introduction to Linux!', text_time)
-    time_print('We are so glad you chose Kelpup as your beginning distrobution.', text_time)
-    
-
-
-if __name__ == '__main__':
-	main()

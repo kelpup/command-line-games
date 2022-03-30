@@ -1,0 +1,4 @@
+After you've done this, you should notice that directories are in blue and standard files are in white. 
+To prove you've mastered the ls command, fill out the prompt below which asks for the files in the directory. 
+Answer one at a time, making sure to copy the file names exactly as they appear at the output of your ls command. 
+Have fun!
