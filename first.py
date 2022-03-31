@@ -33,7 +33,7 @@ def main():
     print_line('#', 50)
     text_time = 0.08
     timed_print('Welcome to your first introduction to Linux!', text_time)
-    time_print('We are so glad you chose Kelpup as your beginning distrobution.', text_time)
+    timed_print('We are so glad you chose Kelpup as your beginning distrobution.', text_time)
     
 
 
