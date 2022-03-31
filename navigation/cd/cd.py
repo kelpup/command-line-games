@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 
 # Import needed classes 
 import time
@@ -6,7 +6,9 @@ import sys
 import os
 
 # Import utilities from other folder
-sys.path.insert(0, os.getcwd() + '/utils')
+ROOT_DIRECTORY = os.path.dirname(os.path.abspath(__file__)) + '/../../'
+sys.path.insert(0, os.path.join(ROOT_DIRECTORY, 'utils'))
+print(sys.path)
 from utils import timed_print, print_line, cd_python, pwd_python
 
 # Set the pace of the print statements and line nums
@@ -43,7 +45,8 @@ def cd_test(subfolder):
 def main():
 
     os.system('clear')
-    print_cd('navigation/cd/cd_intro.txt')
+    directory = os.path.join(ROOT_DIRECTORY, 'navigation/cd/cd_intro.txt')
+    print_cd(directory)
     timed_print('Press any key when you\'ve ran the command: ', time_var)
     input()
     cd_test('introduction')
