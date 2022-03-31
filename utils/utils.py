@@ -38,3 +38,5 @@ def cd_python(path):
         os.chdir('~')
     else:
         os.chdir(path)
+
+# vim: set sts=4 sw=4 ts=8 expandtab ft=python:
