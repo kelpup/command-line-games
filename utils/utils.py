@@ -28,3 +28,13 @@ def pwd_python():
 def ls_python():
     ls = os.listdir('.')
     return(ls)
+
+# Python cd function
+def cd_python(path):
+    if(path == '..'):
+        curr = os.getcwd()
+        os.chdir(curr + '/..')
+    elif (path == ''):
+        os.chdir('~')
+    else:
+        os.chdir(path)
