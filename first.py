@@ -30,10 +30,10 @@ def ls_python():
 
 def main():
 	# timed_print("Hello, there :)", 0.08)
-    print_line('#', 50)
+    #print_line('#', 50)
     text_time = 0.08
     timed_print('Welcome to your first introduction to Linux!', text_time)
-    timed_print('We are so glad you chose Kelpup as your beginning distrobution.', text_time)
+    timed_print('We are so glad you chose Kelpup as your beginning distribution.', text_time)
     
 
 
