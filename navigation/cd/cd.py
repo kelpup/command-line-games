@@ -12,13 +12,13 @@ print(sys.path)
 from utils import timed_print, print_line, cd_python, pwd_python
 
 # Set the pace of the print statements and line nums
-time_var = 0.01
+time_var = 0.05
 line_num = 150
 
 # Print the introduction text
 def print_cd(path):
 
-    print_line('#', line_num)
+    print()
     with open(path) as f:
         lines = f.readlines()
     for line in lines:
@@ -50,7 +50,7 @@ def main():
     timed_print('Press any key when you\'ve ran the command: ', time_var)
     input()
     cd_test('introduction')
-    print_line('#', line_num)
+    print()
         
 if __name__ == '__main__':
 	main()

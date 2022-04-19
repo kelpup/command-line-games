@@ -6,17 +6,18 @@ import sys
 import os
 
 # Import utilities from other folder
-sys.path.insert(0, os.getcwd() + '/utils')
+ROOT_DIRECTORY = os.path.dirname(os.path.abspath(__file__)) + '/../../'
+sys.path.insert(0, os.path.join(ROOT_DIRECTORY, 'utils'))
 from utils import timed_print, print_line, ls_python
 
 # Set the pace of the print statements and line nums
-time_var = 0.01
+time_var = 0.05
 line_num = 150
 
 # Print the introduction text
 def print_ls(path):
 
-    print_line('#', line_num)
+    print()
     with open(path) as f:
         lines = f.readlines()
     for line in lines:
@@ -50,12 +51,14 @@ def get_user_choice():
 def main():
 
     os.system('clear')
-    print_ls('navigation/ls/ls_intro.txt')
+    directory = os.path.join(ROOT_DIRECTORY, 'navigation/ls/ls_intro.txt')
+    print_ls(directory)
     timed_print('Press any key when you\'ve ran the command: ', time_var)
     input()
-    print_ls('navigation/ls/ls_quiz.txt')
+    directory = os.path.join(ROOT_DIRECTORY, 'navigation/ls/ls_quiz.txt')
+    print_ls(directory)
     choice = get_user_choice()
-    print_line('#', line_num)
+    print()
         
 if __name__ == '__main__':
 	main()

@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 
 # Import needed classes 
 import time
@@ -6,17 +6,18 @@ import sys
 import os
 
 # Import utilities from other folder
-sys.path.insert(0, os.getcwd() + '/utils')
+ROOT_DIRECTORY = os.path.dirname(os.path.abspath(__file__)) + '/../'
+sys.path.insert(0, os.path.join(ROOT_DIRECTORY, 'utils'))
 from utils import timed_print, print_line
 
 # Set the pace of the print statements and line nums
-time_var = 0.01
+time_var = 0.05
 line_num = 150
 
 # Print the introduction text
 def print_intro(path):
 
-    print_line('#', line_num)
+    print()
     with open(path) as f:
         lines = f.readlines()
     for line in lines:
@@ -44,7 +45,8 @@ def get_user_choice():
 def main():
 
     os.system('clear')
-    print_intro('introduction/introduction.txt')   
+    directory = os.path.join(ROOT_DIRECTORY, 'introduction/introduction.txt')
+    print_intro(directory)   
     choice = get_user_choice()
     if(choice):
         pass
